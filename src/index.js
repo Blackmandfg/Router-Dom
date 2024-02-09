@@ -20,69 +20,119 @@ import VetPage from "./pages/VetPage";
 import PetsheltersPage from "./pages/PetsheltersPage";
 import VoulunterrteamsPage from "./pages/VoulunterrteamsPage";
 import PetstorePage from "./pages/PetstorePage";
+import * as path from "path";
 
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <App/>
-    },
-    {
-        path: `/login`,
-        element: <LoginPage/>
-    },
-    {
-        path: `/profiles`,
-        element: <ProfilesPage/>
-    },
-    {
-        path: `/news`,
-        element: <NewsPage/>
-    },
-    {
-        path: `/map`,
-        element: <MapPage/>
-    },
+        path: "/dashboard",
+        element: <App/>,
+        children: [
             {
-                path: `/wanted`,
+            path : `profile`,
+    element: <ProfilesPage />},
+            {
+                path: `login`,
+                element: <LoginPage/>
+            },
+            {
+                path: `news`,
+                element: <NewsPage/>
+            },
+            {
+                path: `map`,
+                element: <MapPage/>
+            },
+            {
+                path: `wanted`,
                 element: <WantedPage/>
             },
-    {
-        path: `/wiki`,
-        element: <WikiPage/>
+            {
+                path: `wiki`,
+                element: <WikiPage/>
+            },
+            {
+                path: `messenger`,
+                element: <MessangerPage/>
+            },
+            {
+                path: `fiends`,
+                element: <FriendsPage/>
+            },
+            {
+                path: `groups`,
+                element: <Groupspage/>
+            },
+            {
+                path: `vethelp`,
+                element: <VetPage/>
+            },
+            {
+                path: `petsheletrs`,
+                element: <PetsheltersPage/>
+            },
+            {
+                path: `volunteerteams`,
+                element: <VoulunterrteamsPage/>
+            },
+            {
+                path: `othersservices`,
+                element: <OtherservicesPage/>
+            },
+            {
+                path: `petstore`,
+                element: <PetstorePage/>
+            },
+        ]
     },
-    {
-        path: `/messenger`,
-        element: <MessangerPage/>
-    },
-    {
-        path: `/fiends`,
-        element: <FriendsPage/>
-    },
-    {
-        path: `/groups`,
-        element: <Groupspage/>
-    },
-    {
-        path: `/vethelp`,
-        element: <VetPage/>
-    },
-    {
-        path: `/petsheletrs`,
-        element: <PetsheltersPage/>
-    },
-    {
-        path: `/volunteerteams`,
-        element: <VoulunterrteamsPage/>
-    },
-    {
-        path: `/othersservices`,
-        element: <OtherservicesPage/>
-    },
-    {
-        path: `/petstore`,
-        element: <PetstorePage/>
-    },
+    // {
+    //     path: `/news`,
+    //     element: <NewsPage/>
+    // },
+    // {
+    //     path: `/map`,
+    //     element: <MapPage/>
+    // },
+    //         {
+    //             path: `/wanted`,
+    //             element: <WantedPage/>
+    //         },
+    // {
+    //     path: `/wiki`,
+    //     element: <WikiPage/>
+    // },
+    // {
+    //     path: `/messenger`,
+    //     element: <MessangerPage/>
+    // },
+    // {
+    //     path: `/fiends`,
+    //     element: <FriendsPage/>
+    // },
+    // {
+    //     path: `/groups`,
+    //     element: <Groupspage/>
+    // },
+    // {
+    //     path: `/vethelp`,
+    //     element: <VetPage/>
+    // },
+    // {
+    //     path: `/petsheletrs`,
+    //     element: <PetsheltersPage/>
+    // },
+    // {
+    //     path: `/volunteerteams`,
+    //     element: <VoulunterrteamsPage/>
+    // },
+    // {
+    //     path: `/othersservices`,
+    //     element: <OtherservicesPage/>
+    // },
+    // {
+    //     path: `/petstore`,
+    //     element: <PetstorePage/>
+    // },
 
 ]);
 

@@ -1,9 +1,11 @@
 import React from 'react';
+import AsideBlock from "../components/AsideBlock/AsideBlock";
+import {Outlet} from "react-router-dom";
 
 const ProfilesPage = () => {
     return (
         <div>
-            You are welcome to visit this page.
+            profile
         </div>
     );
 };
